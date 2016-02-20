@@ -1,0 +1,11 @@
+dist/
+/TAGS
+/tags
+/.cabal-sandbox/
+/.stack-work/
+cabal.sandbox.config
+*~
+*.o
+*.dyn_o
+*.hi
+*.dyn_hi

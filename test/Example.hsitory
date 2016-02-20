@@ -1,0 +1,3 @@
+HistoricDataK {histVer = 0, histRefs = Just [], histData = DataK Contact [] [RecConK Contact [(name,NotStrict,ConT Name),(address,NotStrict,ConT Address),(phone,NotStrict,ConT Phone)]]}
+HistoricDataK {histVer = 0, histRefs = Just [], histData = DataK Contacts [] [NormalConK Contacts [(NotStrict,AppT ListT (AppT (AppT (TupleT 2) (ConT Name)) (ConT Address)))]]}
+HistoricDataK {histVer = 1, histRefs = Just [(Contact,0)], histData = DataK Contacts [] [NormalConK Contacts [(NotStrict,AppT ListT (ConT Contact))]]}

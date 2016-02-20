@@ -1,0 +1,55 @@
+name:                safecopy-history
+version:             0.1.0.0
+synopsis:            Automatically keep old versions of datatypes using Template Haskell
+-- description:
+license:             AGPL-3
+license-file:        LICENSE
+author:              Daniel Gröber <dxld@darkboxed.org>
+maintainer:          dxld@darkboxed.org
+category:            Data
+build-type:          Simple
+cabal-version:       >=1.10
+
+library
+  exposed-modules:     Data.KeepHistory
+                       Data.KeepHistory.Types
+                       Data.KeepHistory.DeriveSafeCopy
+  ghc-options:         -Wall
+  default-extensions:  ViewPatterns
+                     , TemplateHaskell
+                     , TupleSections
+                     , StandaloneDeriving
+                     , DeriveDataTypeable
+  build-depends:
+                base             < 4.9  && >= 4.8
+              , template-haskell < 2.11 && >= 2.10
+              , filepath         < 1.5  && >= 1.4
+              , directory        < 1.3  && >= 1.2
+              , syb              < 0.7
+              , deepseq          < 1.5
+              , containers       < 0.6
+              , safecopy         < 0.10
+              -- debugging
+              , pretty-show
+  default-language:    Haskell2010
+
+test-suite test
+  type: exitcode-stdio-1.0
+  main-is: Test.hs
+  build-depends:
+                safecopy-history
+              , base            < 4.9
+              , safecopy        < 0.10
+  ghc-options: -Wall
+  hs-source-dirs: test
+  default-language:    Haskell2010
+
+test-suite example
+  type: exitcode-stdio-1.0
+  main-is: Example.hs
+  build-depends:
+                safecopy-history
+              , base            < 4.9
+              , safecopy        < 0.10
+  hs-source-dirs: test
+  default-language:    Haskell2010

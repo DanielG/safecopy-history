@@ -1,0 +1,2 @@
+HistoricDataK {histVer = 0, histRefs = Just [(E,0)], histData = DataK D [] [NormalConK D [(NotStrict,ConT E)],NormalConK G []]}
+HistoricDataK {histVer = 0, histRefs = Just [(D,0)], histData = DataK E [] [NormalConK E [(NotStrict,ConT D)],NormalConK F []]}
